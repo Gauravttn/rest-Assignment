@@ -10,7 +10,7 @@ public class Employee {
     @Min(value=0,message = "ID should be greater than zero")
     private Integer id;
 
-    @Min(value=0,message = "Age should be greater than 0")
+    @Min(value=1,message = "Age should be greater than 0")
     private Integer age;
 
     @Size(min = 2,message = "Invalid Name ")
