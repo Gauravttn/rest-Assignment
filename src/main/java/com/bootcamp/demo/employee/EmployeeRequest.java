@@ -49,6 +49,15 @@ public class EmployeeRequest {
         return s;
     }
 
+    @PutMapping("emp/update")
+    public String updateEmployee(@Valid @RequestBody Employee employee) {
+        Employee employee1 = service.updateEmployeeDetails(employee);
+        if (employee1 == null)
+            throw new EmployeeNotFoundException("ID not found : "+employee.getId());
+
+        return "Updating Success";
+    }
+
 
 
 }

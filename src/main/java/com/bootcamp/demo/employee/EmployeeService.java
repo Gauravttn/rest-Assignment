@@ -38,4 +38,14 @@ public class EmployeeService {
         return null;
     }
 
+    public Employee updateEmployeeDetails(Employee employee){
+        for(Employee e:emp){
+            if(e.getId().equals(employee.getId())){
+                e.setName(employee.getName());
+                e.setAge(employee.getAge());
+                return e;
+            }
+        }
+        return null;
+    }
 }
